@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-nfs-mysql-slave
+spec:
+  capacity:
+    storage: 6Gi
+  accessModes:
+  - ReadWriteOnce
+  nfs:
+    path: /data/mysql-slave
+    server: 192.168.137.153
+  persistentVolumeReclaimPolicy: Recycle
+
+
