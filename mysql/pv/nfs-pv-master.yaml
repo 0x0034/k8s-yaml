@@ -8,6 +8,8 @@ spec:
   accessModes:
   - ReadWriteOnce
   nfs:
+    # 对应 nfs 服务器/etc/exports 文件配置
     path: /data/mysql-master
+    # nfs 服务器IP
     server: 192.168.137.153
   persistentVolumeReclaimPolicy: Recycle
